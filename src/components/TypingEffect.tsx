@@ -1,5 +1,5 @@
-"use client"
-import { FC, useEffect, useState } from 'react';
+"use client";
+import { FC, useEffect, useState } from "react";
 
 interface TypingEffectProps {
   texts: string[];
@@ -7,7 +7,7 @@ interface TypingEffectProps {
 }
 
 export const TypingEffect: FC<TypingEffectProps> = ({ texts, speed }) => {
-  const [displayedText, setDisplayedText] = useState('');
+  const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTypingComplete, setIsTypingComplete] = useState(false);
 
@@ -19,7 +19,9 @@ export const TypingEffect: FC<TypingEffectProps> = ({ texts, speed }) => {
     const typingEffect = () => {
       typingTimer = setInterval(() => {
         if (displayedText.length < text.length) {
-          setDisplayedText((prevText) => prevText + text.charAt(prevText.length));
+          setDisplayedText(
+            (prevText) => prevText + text.charAt(prevText.length)
+          );
         } else {
           clearInterval(typingTimer);
           setIsTypingComplete(true);
@@ -30,7 +32,9 @@ export const TypingEffect: FC<TypingEffectProps> = ({ texts, speed }) => {
     const deletingEffect = () => {
       deletingTimer = setInterval(() => {
         if (displayedText.length > 0) {
-          setDisplayedText((prevText) => prevText.slice(0, prevText.length - 1));
+          setDisplayedText((prevText) =>
+            prevText.slice(0, prevText.length - 1)
+          );
         } else {
           clearInterval(deletingTimer);
           setIsTypingComplete(false);
@@ -53,8 +57,12 @@ export const TypingEffect: FC<TypingEffectProps> = ({ texts, speed }) => {
 
   return (
     <>
-      <span className="text-accent border-b-2 border-accent tracking-widest">{displayedText}</span>
-      <span className="text-accent border-b-2 border-accent animate-pulse tracking-widest">|</span>
+      <span className="text-success border-b-2 border-success tracking-widest">
+        {displayedText}
+      </span>
+      <span className="text-success border-b-2 border-success animate-pulse tracking-widest">
+        |
+      </span>
     </>
   );
 };
