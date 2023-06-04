@@ -1,18 +1,18 @@
-import React from "react";
-import "./globals.css";
-import { Poppins } from "next/font/google";
-import { Navbar, ToggleThemeButton } from "@/components";
+import React from 'react';
+import './globals.css';
+import { Poppins } from 'next/font/google';
+import { Navbar } from '@/components';
 
 const poppins = Poppins({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "900"],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '900'],
   preload: true,
-  style: ["normal", "italic"],
-  subsets: ["latin"],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
 });
 
 export const metadata = {
-  title: "Portfolio - Elmer Jacobo",
-  description: "Elmer Jacobo Portfolio",
+  title: 'Portfolio - Elmer Jacobo',
+  description: 'Elmer Jacobo Portfolio',
 };
 
 export default function RootLayout({

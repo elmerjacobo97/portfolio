@@ -1,6 +1,5 @@
-import React from "react";
-import { TypingEffect } from "@/components";
 import { texts } from "@/helpers";
+import { TypingEffect } from "@/components";
 
 export default function Home() {
   return (
@@ -11,8 +10,8 @@ export default function Home() {
       <div className="bg-opacity-60 hero-overlay"></div>
       <div className="text-center hero-content text-neutral-content">
         <div className="max-w-md">
-          <h1 className="mb-5 text-4xl font-black md:text-6xl">Elmer Jacobo</h1>
-          <h2 className="mt-3 text-2xl font-black md:text-3xl">
+          <h1 className="mb-5 text-3xl font-black sm:text-6xl">Elmer Jacobo</h1>
+          <h2 className="mt-3 text-xl font-black sm:text-3xl">
             Soy <TypingEffect texts={texts} speed={150} />
           </h2>
           <button className="mt-10 gap-2 btn btn-primary">

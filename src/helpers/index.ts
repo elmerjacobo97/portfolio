@@ -17,7 +17,7 @@ import {
 } from "react-icons/si";
 import { FaAngular, FaDatabase, FaNodeJs, FaReact } from "react-icons/fa";
 import { IoLogoJavascript, IoLogoVue } from "react-icons/io5";
-import { TbBrandReactNative } from "react-icons/all";
+import { TbBrandReactNative } from "react-icons/tb";
 
 interface SkillIcons {
   [key: string]: { icon: IconType; color: string };

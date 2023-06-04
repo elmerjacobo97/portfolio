@@ -11,7 +11,7 @@ interface SkillItemProps {
   skills: Skill[];
 }
 
-export function SkillItem({ skills }: SkillItemProps) {
+export const SkillItem = ({ skills }: SkillItemProps) => {
   return (
     <div>
       {skills.map((skill, index) => (
@@ -38,4 +38,4 @@ export function SkillItem({ skills }: SkillItemProps) {
       ))}
     </div>
   );
-}
+};

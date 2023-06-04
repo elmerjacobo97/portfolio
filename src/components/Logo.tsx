@@ -8,16 +8,17 @@ export const Logo = () => {
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
+        strokeWidth={1.5}
         stroke="currentColor"
         className="w-9 h-9 text-primary dark:text-success mr-2"
       >
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
-          strokeWidth={2}
-          d="M12 2c4.97 0 9 4.03 9 9s-4.03 9-9 9-9-4.03-9-9 4.03-9 9-9zm3 13h-2c-1.28 0-2.5-.5-3.47-1.46-.97-.97-1.46-2.19-1.46-3.47V8m6 1v2.03c0 2.24-1.81 4.05-4.05 4.05H8.05C5.81 15.08 4 13.27 4 11.03V9m2-1h2m6-2v2m0 6h-2m-6 0h2m2 0v-2"
+          d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z"
         />
       </svg>
+
       <span className="font-semibold text-primary dark:text-success text-xl tracking-tight">
         Developer
       </span>

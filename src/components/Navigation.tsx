@@ -1,22 +1,36 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-export const Navigation = () => {
+interface Props {
+  closeDropdown: () => void;
+}
+
+export const Navigation = ({ closeDropdown }: Props) => {
   return (
     <>
       <li>
-        <Link href={"/"}>Inicio</Link>
+        <Link href={'/'} onClick={closeDropdown}>
+          Inicio
+        </Link>
       </li>
       <li>
-        <Link href={"/about"}>Sobre mi</Link>
+        <Link href={'/about'} onClick={closeDropdown}>
+          Sobre mi
+        </Link>
       </li>
       <li>
-        <Link href={"/skills"}>Skills</Link>
+        <Link href={'/skills'} onClick={closeDropdown}>
+          Skills
+        </Link>
       </li>
       <li>
-        <Link href={"/projects"}>Proyectos</Link>
+        <Link href={'/projects'} onClick={closeDropdown}>
+          Proyectos
+        </Link>
       </li>
       <li>
-        <Link href={"/contact"}>Contacto</Link>
+        <Link href={'/contact'} onClick={closeDropdown}>
+          Contacto
+        </Link>
       </li>
     </>
   );

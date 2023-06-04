@@ -1,8 +1,10 @@
+"use client";
+
 import { useEffect, useState } from "react";
 
 const getInitialMode = (): boolean => {
   if (typeof window !== "undefined" && window.localStorage) {
-    const storedTheme = window.localStorage.getItem("theme");
+    const storedTheme = window.localStorage.getItem("theme") as string;
     if (storedTheme) {
       return storedTheme === "dark";
     }
@@ -27,7 +29,7 @@ export const useDarkMode = (): {
     };
 
     setIsDarkMode((prevMode) => {
-      const storedTheme = window.localStorage.getItem("theme");
+      const storedTheme = window.localStorage.getItem("theme") as string;
       if (storedTheme) {
         return storedTheme === "dark";
       } else if (prevMode !== systemTheme.matches) {

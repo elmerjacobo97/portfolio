@@ -57,10 +57,10 @@ export const TypingEffect: FC<TypingEffectProps> = ({ texts, speed }) => {
 
   return (
     <>
-      <span className="text-success border-b-2 border-success tracking-widest">
+      <span className="text-success border-b-2 border-success">
         {displayedText}
       </span>
-      <span className="text-success border-b-2 border-success animate-pulse tracking-widest">
+      <span className="text-success border-b-2 border-success animate-pulse">
         |
       </span>
     </>
