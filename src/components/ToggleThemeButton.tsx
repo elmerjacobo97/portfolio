@@ -1,5 +1,11 @@
 "use client";
+
 import { useDarkMode } from "@/app/hooks";
+
+interface Props {
+  isDarkMode: boolean;
+  toggleTheme: () => void;
+}
 
 export const ToggleThemeButton = () => {
   const { isDarkMode, toggleTheme } = useDarkMode();
@@ -9,9 +15,7 @@ export const ToggleThemeButton = () => {
       <input type="checkbox" onChange={toggleTheme} checked={isDarkMode} />
 
       <svg
-        className={`swap-on fill-current w-8 h-8 ${
-          isDarkMode ? "text-gray-400" : "text-yellow-500"
-        }`}
+        className={`swap-on fill-current w-8 h-8 text-gray-400`}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
       >
@@ -19,9 +23,7 @@ export const ToggleThemeButton = () => {
       </svg>
 
       <svg
-        className={`swap-off fill-current w-8 h-8 ${
-          isDarkMode ? "text-yellow-500" : "text-gray-400"
-        }`}
+        className={`swap-off fill-current w-8 h-8 text-gray-400`}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
       >

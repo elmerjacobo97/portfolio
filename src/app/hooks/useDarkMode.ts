@@ -1,15 +1,24 @@
 import { useEffect, useState } from "react";
 
+const getInitialMode = (): boolean => {
+  if (typeof window !== "undefined" && window.localStorage) {
+    const storedTheme = window.localStorage.getItem("theme");
+    if (storedTheme) {
+      return storedTheme === "dark";
+    }
+
+    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+    return systemTheme.matches;
+  }
+
+  return false;
+};
+
 export const useDarkMode = (): {
   isDarkMode: boolean;
   toggleTheme: () => void;
 } => {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
-    const storedTheme =
-      typeof window !== "undefined" ? localStorage.getItem("theme") : null;
-    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
-    return storedTheme === "dark" || systemTheme.matches;
-  });
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(getInitialMode);
 
   useEffect(() => {
     const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
@@ -18,16 +27,17 @@ export const useDarkMode = (): {
     };
 
     setIsDarkMode((prevMode) => {
-      const systemMatches = systemTheme.matches;
-      const storedTheme =
-        typeof window !== "undefined" ? localStorage.getItem("theme") : null;
-      if (storedTheme === "dark" || storedTheme === "light") {
+      const storedTheme = window.localStorage.getItem("theme");
+      if (storedTheme) {
         return storedTheme === "dark";
-      } else if (prevMode !== systemMatches) {
-        if (typeof window !== "undefined") {
-          localStorage.setItem("theme", systemMatches ? "dark" : "light");
+      } else if (prevMode !== systemTheme.matches) {
+        if (typeof window !== "undefined" && window.localStorage) {
+          window.localStorage.setItem(
+            "theme",
+            systemTheme.matches ? "dark" : "light"
+          );
         }
-        return systemMatches;
+        return systemTheme.matches;
       }
       return prevMode;
     });
@@ -40,16 +50,13 @@ export const useDarkMode = (): {
   }, []);
 
   useEffect(() => {
-    const root = window.document.documentElement;
-    if (isDarkMode) {
-      root.classList.add("dark");
-      if (typeof window !== "undefined") {
-        localStorage.setItem("theme", "dark");
-      }
-    } else {
-      root.classList.remove("dark");
-      if (typeof window !== "undefined") {
-        localStorage.setItem("theme", "light");
+    if (typeof window !== "undefined" && window.localStorage) {
+      if (isDarkMode) {
+        window.document.documentElement.classList.add("dark");
+        window.localStorage.setItem("theme", "dark");
+      } else {
+        window.document.documentElement.classList.remove("dark");
+        window.localStorage.setItem("theme", "light");
       }
     }
   }, [isDarkMode]);
@@ -57,8 +64,8 @@ export const useDarkMode = (): {
   const toggleTheme = () => {
     setIsDarkMode((prevMode) => {
       const newMode = !prevMode;
-      if (typeof window !== "undefined") {
-        localStorage.setItem("theme", newMode ? "dark" : "light");
+      if (typeof window !== "undefined" && window.localStorage) {
+        window.localStorage.setItem("theme", newMode ? "dark" : "light");
       }
       return newMode;
     });
