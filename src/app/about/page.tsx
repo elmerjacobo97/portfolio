@@ -3,14 +3,14 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="py-20">
+    <div className="py-20 bg-white dark:bg-slate-800">
       <h1 className="text-4xl md:text-6xl font-black text-center text-primary">
         Sobre mí
       </h1>
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-center items-center mt-10 px-4">
           <div className="lg:max-w-xl">
-            <div className="rounded-md overflow-hidden hover:shadow-md border border-base-200 bg-base-100 p-2">
+            <div className="rounded-md overflow-hidden hover:shadow-md border dark:border-none dark:bg-slate-800 p-2">
               <div className="aspect-w-2 aspect-h-3">
                 <Image
                   src={"/images/web_developer.svg"}

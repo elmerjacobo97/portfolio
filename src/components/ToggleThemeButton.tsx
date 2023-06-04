@@ -1,17 +1,12 @@
 "use client";
-
-import { useState } from "react";
+import { useDarkMode } from "@/app/hooks";
 
 export const ToggleThemeButton = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-  };
+  const { isDarkMode, toggleTheme } = useDarkMode();
 
   return (
     <label className="swap swap-rotate">
-      <input type="checkbox" onChange={toggleTheme} />
+      <input type="checkbox" onChange={toggleTheme} checked={isDarkMode} />
 
       <svg
         className={`swap-on fill-current w-8 h-8 ${

@@ -1,7 +1,7 @@
 import React from "react";
 import "./globals.css";
 import { Poppins } from "next/font/google";
-import { Navbar } from "@/components";
+import { Navbar, ToggleThemeButton } from "@/components";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "900"],

@@ -9,7 +9,7 @@ import { SkillItem } from "@/components";
 
 export default function Skills() {
   return (
-    <div className="min-h-screen py-20">
+    <div className="min-h-screen py-20 bg-white dark:bg-slate-800">
       <div className="mx-auto max-w-6xl px-4">
         <h1 className="text-center text-4xl font-black text-primary md:text-6xl">
           Mis Habilidades

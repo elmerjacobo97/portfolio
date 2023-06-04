@@ -17,7 +17,7 @@ export function SkillItem({ skills }: SkillItemProps) {
       {skills.map((skill, index) => (
         <div
           key={index}
-          className="mb-4 flex items-center rounded-lg border p-4 shadow-md transition-all bg-base-200 border-base-300 space-x-4 hover:scale-105 hover:shadow-xl"
+          className="mb-4 flex items-center rounded-lg border p-4 shadow-md transition-all bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-800 space-x-4 hover:scale-105 hover:shadow-xl"
         >
           <div className="flex-shrink-0">
             {createElement(skillIcons[skill.name].icon as IconType, {

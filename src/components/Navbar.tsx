@@ -1,7 +1,7 @@
-import React from "react";
+"use client";
+import Image from "next/image";
 import { Logo } from "@/components/Logo";
 import { Navigation } from "@/components/Navigation";
-import Image from "next/image";
 import { ToggleThemeButton } from "@/components/ToggleThemeButton";
 
 export const Navbar = () => {
