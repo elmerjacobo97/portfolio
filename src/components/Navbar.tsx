@@ -11,7 +11,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="fixed inset-x-0 top-0 h-16 bg-slate-200 shadow navbar dark:bg-slate-800 z-50">
+    <nav className="fixed inset-x-0 top-0 z-50 h-16 shadow bg-slate-200 navbar dark:bg-slate-800">
       <div className="navbar-start">
         <div className="dropdown">
           <label
@@ -21,7 +21,7 @@ export const Navbar = () => {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="w-5 h-5"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -53,8 +53,9 @@ export const Navbar = () => {
         </ul>
       </div>
       <div className="gap-5 navbar-end">
+        <ToggleThemeButton />
         <div className="avatar">
-          <div className="w-10 rounded-full ring ring-slate-600 ring-offset-2 ring-offset-base-100">
+          <div className="w-12 rounded-full">
             <Image
               src="/images/profile.jpg"
               width={100}
@@ -64,7 +65,6 @@ export const Navbar = () => {
             />
           </div>
         </div>
-        <ToggleThemeButton />
       </div>
     </nav>
   );

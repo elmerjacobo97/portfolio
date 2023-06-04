@@ -1,5 +1,4 @@
-import React from "react";
-import Link from "next/link";
+import Link from 'next/link';
 
 export const Logo = () => {
   return (
@@ -10,7 +9,7 @@ export const Logo = () => {
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="w-9 h-9 text-primary dark:text-success mr-2"
+        className="mr-2 w-9 h-9 text-primary dark:text-success"
       >
         <path
           strokeLinecap="round"
@@ -19,7 +18,7 @@ export const Logo = () => {
         />
       </svg>
 
-      <span className="font-semibold text-primary dark:text-success text-xl tracking-tight">
+      <span className="text-xl font-semibold text-primary dark:text-success">
         Developer
       </span>
     </Link>
