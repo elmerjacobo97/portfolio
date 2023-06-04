@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 const getInitialMode = (): boolean => {
-  if (typeof window !== "undefined" && window.localStorage) {
-    const storedTheme = window.localStorage.getItem("theme") as string;
+  if (typeof window !== 'undefined' && window.localStorage) {
+    const storedTheme = window.localStorage.getItem('theme') as string;
     if (storedTheme) {
-      return storedTheme === "dark";
+      return storedTheme === 'dark';
     }
 
-    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
     return systemTheme.matches;
   }
 
@@ -23,20 +23,20 @@ export const useDarkMode = (): {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(getInitialMode);
 
   useEffect(() => {
-    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
     const handleThemeChange = (event: MediaQueryListEvent) => {
       setIsDarkMode(event.matches);
     };
 
     setIsDarkMode((prevMode) => {
-      const storedTheme = window.localStorage.getItem("theme") as string;
+      const storedTheme = window.localStorage.getItem('theme') as string;
       if (storedTheme) {
-        return storedTheme === "dark";
+        return storedTheme === 'dark';
       } else if (prevMode !== systemTheme.matches) {
-        if (typeof window !== "undefined" && window.localStorage) {
+        if (typeof window !== 'undefined' && window.localStorage) {
           window.localStorage.setItem(
-            "theme",
-            systemTheme.matches ? "dark" : "light"
+            'theme',
+            systemTheme.matches ? 'dark' : 'light'
           );
         }
         return systemTheme.matches;
@@ -44,21 +44,21 @@ export const useDarkMode = (): {
       return prevMode;
     });
 
-    systemTheme.addEventListener("change", handleThemeChange);
+    systemTheme.addEventListener('change', handleThemeChange);
 
     return () => {
-      systemTheme.removeEventListener("change", handleThemeChange);
+      systemTheme.removeEventListener('change', handleThemeChange);
     };
   }, []);
 
   useEffect(() => {
-    if (typeof window !== "undefined" && window.localStorage) {
+    if (typeof window !== 'undefined' && window.localStorage) {
       if (isDarkMode) {
-        window.document.documentElement.classList.add("dark");
-        window.localStorage.setItem("theme", "dark");
+        window.document.documentElement.classList.add('dark');
+        window.localStorage.setItem('theme', 'dark');
       } else {
-        window.document.documentElement.classList.remove("dark");
-        window.localStorage.setItem("theme", "light");
+        window.document.documentElement.classList.remove('dark');
+        window.localStorage.setItem('theme', 'light');
       }
     }
   }, [isDarkMode]);
@@ -66,8 +66,8 @@ export const useDarkMode = (): {
   const toggleTheme = () => {
     setIsDarkMode((prevMode) => {
       const newMode = !prevMode;
-      if (typeof window !== "undefined" && window.localStorage) {
-        window.localStorage.setItem("theme", newMode ? "dark" : "light");
+      if (typeof window !== 'undefined' && window.localStorage) {
+        window.localStorage.setItem('theme', newMode ? 'dark' : 'light');
       }
       return newMode;
     });
