@@ -4,17 +4,22 @@ import {
   frontendSkills,
   mobileSkills,
   otherSkills,
-} from "@/helpers";
-import { SkillItem } from "@/components";
+  designSkills,
+} from '@/helpers';
+import { SkillItem } from '@/components';
 
 export default function Skills() {
   return (
     <div className="min-h-screen py-20 bg-white dark:bg-slate-800">
-      <div className="mx-auto max-w-6xl px-4">
-        <h1 className="text-center text-4xl font-black text-primary md:text-6xl">
+      <div className="max-w-6xl px-4 mx-auto">
+        <h1 className="text-4xl font-black text-center text-primary md:text-6xl">
           Mis Habilidades
         </h1>
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 ">
+        <div className="grid grid-cols-1 gap-5 mt-10 sm:grid-cols-2 lg:grid-cols-3 ">
+          <div>
+            <h2 className="mb-4 text-2xl font-bold">Design</h2>
+            <SkillItem skills={designSkills} />
+          </div>
           <div>
             <h2 className="mb-4 text-2xl font-bold">Frontend</h2>
             <SkillItem skills={frontendSkills} />

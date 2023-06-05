@@ -17,7 +17,7 @@ export const SkillItem = ({ skills }: SkillItemProps) => {
       {skills.map((skill, index) => (
         <div
           key={index}
-          className="flex items-center p-4 mb-4 space-x-4 transition-all rounded-lg shadow-md hover:scale-105 hover:shadow-xl"
+          className="flex items-center p-4 mb-4 space-x-4 transition-all border rounded-lg shadow-md border-slate-50 dark:border-slate-700 hover:scale-105 hover:shadow-xl"
         >
           <div className="flex-shrink-0">
             {createElement(skillIcons[skill.name].icon as IconType, {

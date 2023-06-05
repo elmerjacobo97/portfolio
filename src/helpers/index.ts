@@ -14,6 +14,16 @@ import {
   SiSequelize,
   SiSqlite,
   SiTypescript,
+  SiIonic,
+  SiMicrosoftsqlserver,
+  SiDjango,
+  SiWebpack,
+  SiHtml5,
+  SiCss3,
+  SiBootstrap,
+  SiTailwindcss,
+  SiMaterialdesign,
+  SiSass,
 } from 'react-icons/si';
 import { FaAngular, FaDatabase, FaNodeJs, FaReact } from 'react-icons/fa';
 import { IoLogoJavascript, IoLogoVue } from 'react-icons/io5';
@@ -28,6 +38,15 @@ export const texts = [
   'Backend Developer',
   'FullStack Developer',
   'Mobile Developer',
+];
+
+export const designSkills = [
+  { name: 'HTML', value: 90 },
+  { name: 'CSS', value: 75 },
+  { name: 'Bootstrap', value: 80 },
+  { name: 'Tailwind CSS', value: 80 },
+  { name: 'Material UI', value: 60 },
+  { name: 'Sass', value: 60 },
 ];
 
 export const frontendSkills = [
@@ -45,11 +64,13 @@ export const backendSkills = [
   { name: 'Nest.js', value: 80 },
   { name: 'PHP', value: 40 },
   { name: 'Laravel', value: 80 },
+  { name: 'Django', value: 30 },
 ];
 
 export const mobileSkills = [
   { name: 'Flutter', value: 70 },
   { name: 'React Native', value: 80 },
+  { name: 'Ionic', value: 30 },
 ];
 
 export const databaseSkills = [
@@ -57,6 +78,7 @@ export const databaseSkills = [
   { name: 'SQLite', value: 70 },
   { name: 'MongoDB', value: 70 },
   { name: 'Firebase', value: 75 },
+  { name: 'Microsoft SQL Server', value: 35 },
 ];
 
 export const otherSkills = [
@@ -64,6 +86,7 @@ export const otherSkills = [
   { name: 'Sequelize', value: 50 },
   { name: 'Docker', value: 70 },
   { name: 'Git', value: 80 },
+  { name: 'Webpack', value: 60 },
 ];
 
 export const skillIcons: SkillIcons = {
@@ -88,6 +111,16 @@ export const skillIcons: SkillIcons = {
   'Vue.js': { icon: IoLogoVue, color: '#4FC08D' },
   'React Native': { icon: TbBrandReactNative, color: '#61DAFB' },
   Flutter: { icon: SiFlutter, color: '#3B82F6' },
+  Ionic: { icon: SiIonic, color: '#176BFF' },
+  'Microsoft SQL Server': { icon: SiMicrosoftsqlserver, color: '#CC2927' },
+  Django: { icon: SiDjango, color: '#092E20' },
+  Webpack: { icon: SiWebpack, color: '#8DD6F9' },
+  HTML: { icon: SiHtml5, color: '#E34F26' },
+  CSS: { icon: SiCss3, color: '#2965F1' },
+  Bootstrap: { icon: SiBootstrap, color: '#563D7C' },
+  'Tailwind CSS': { icon: SiTailwindcss, color: '#00ADB5' },
+  'Material UI': { icon: SiMaterialdesign, color: '#673AB7' },
+  Sass: { icon: SiSass, color: '#CC6699' },
 };
 
 export function getCurrentYear() {
