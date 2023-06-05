@@ -12,8 +12,10 @@ export default function Skills() {
   return (
     <div className="min-h-screen py-20 bg-white dark:bg-slate-800">
       <div className="max-w-6xl px-4 mx-auto">
-        <h1 className="text-4xl font-black text-center text-primary md:text-6xl">
-          Mis Habilidades
+        <h1 className="text-4xl font-black text-center md:text-6xl">
+          <span className="text-transparent bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text">
+            Mis Habilidades
+          </span>
         </h1>
         <div className="grid grid-cols-1 gap-5 mt-10 sm:grid-cols-2 lg:grid-cols-3 ">
           <div>

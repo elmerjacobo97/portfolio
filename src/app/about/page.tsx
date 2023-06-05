@@ -4,8 +4,10 @@ import Image from 'next/image';
 export default function About() {
   return (
     <div className="min-h-screen py-20 bg-white dark:bg-slate-800 animate__animated animate__fadeIn">
-      <h1 className="text-4xl font-black text-center md:text-6xl text-primary">
-        Sobre mí
+      <h1 className="text-4xl font-black text-center md:text-6xl">
+        <span className="text-transparent bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text">
+          Sobre mí
+        </span>
       </h1>
       <div className="max-w-6xl mx-auto">
         <div className="grid items-center justify-center grid-cols-1 gap-10 px-4 mt-10 md:grid-cols-2">

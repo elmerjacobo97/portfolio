@@ -3,8 +3,10 @@ import { CardProject } from '@/components';
 export default function Projects() {
   return (
     <div className="min-h-screen py-20 bg-white dark:bg-slate-800">
-      <h1 className="text-4xl font-black text-center text-primary md:text-6xl">
-        Últimos Proyectos
+      <h1 className="text-4xl font-black text-center md:text-6xl">
+        <span className="text-transparent bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text">
+          Últimos Proyectos
+        </span>
       </h1>
 
       <div className="max-w-6xl px-4 mx-auto">
