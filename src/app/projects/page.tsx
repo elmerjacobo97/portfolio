@@ -27,6 +27,42 @@ export default function Projects() {
             title="CRM - Clientes + React + JSON-SERVER"
             description="Es una aplicación Angular que utiliza la API restcountries para mostrar información de países. Se desarrolla con el uso de Tailwind y se añaden animaciones con Animate.css."
           />
+          <CardProject
+            imageSrc="/images/hero.jpg"
+            imageAlt="Shoes"
+            title="CRM - Clientes + React + JSON-SERVER"
+            description="Es una aplicación Angular que utiliza la API restcountries para mostrar información de países. Se desarrolla con el uso de Tailwind y se añaden animaciones con Animate.css."
+          />
+          <CardProject
+            imageSrc="/images/hero.jpg"
+            imageAlt="Shoes"
+            title="CRM - Clientes + React + JSON-SERVER"
+            description="Es una aplicación Angular que utiliza la API restcountries para mostrar información de países. Se desarrolla con el uso de Tailwind y se añaden animaciones con Animate.css."
+          />
+          <CardProject
+            imageSrc="/images/hero.jpg"
+            imageAlt="Shoes"
+            title="CRM - Clientes + React + JSON-SERVER"
+            description="Es una aplicación Angular que utiliza la API restcountries para mostrar información de países. Se desarrolla con el uso de Tailwind y se añaden animaciones con Animate.css."
+          />
+          <CardProject
+            imageSrc="/images/hero.jpg"
+            imageAlt="Shoes"
+            title="CRM - Clientes + React + JSON-SERVER"
+            description="Es una aplicación Angular que utiliza la API restcountries para mostrar información de países. Se desarrolla con el uso de Tailwind y se añaden animaciones con Animate.css."
+          />
+          <CardProject
+            imageSrc="/images/hero.jpg"
+            imageAlt="Shoes"
+            title="CRM - Clientes + React + JSON-SERVER"
+            description="Es una aplicación Angular que utiliza la API restcountries para mostrar información de países. Se desarrolla con el uso de Tailwind y se añaden animaciones con Animate.css."
+          />
+          <CardProject
+            imageSrc="/images/hero.jpg"
+            imageAlt="Shoes"
+            title="CRM - Clientes + React + JSON-SERVER"
+            description="Es una aplicación Angular que utiliza la API restcountries para mostrar información de países. Se desarrolla con el uso de Tailwind y se añaden animaciones con Animate.css."
+          />
         </div>
       </div>
     </div>

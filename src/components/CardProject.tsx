@@ -1,5 +1,7 @@
+import { useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { HiCode, HiExternalLink } from 'react-icons/hi';
+import ScrollReveal from 'scrollreveal';
 
 interface CardProps {
   imageSrc: string;
@@ -14,8 +16,31 @@ export const CardProject = ({
   title,
   description,
 }: CardProps) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      import('scrollreveal').then((ScrollReveal) => {
+        const sr = ScrollReveal.default();
+
+        if (cardRef.current) {
+          sr.reveal(cardRef.current, {
+            delay: 200,
+            distance: '50px',
+            duration: 500,
+            easing: 'ease-out',
+            origin: 'bottom',
+          });
+        }
+      });
+    }
+  }, []);
+
   return (
-    <div className="transition-all shadow-lg card hover:shadow-xl">
+    <div
+      className="transition-all shadow-lg card hover:shadow-xl"
+      ref={cardRef}
+    >
       <figure>
         <Image src={imageSrc} width={400} height={400} alt={imageAlt} />
       </figure>
