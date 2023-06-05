@@ -9,7 +9,7 @@ export default function Home() {
   const currentYear = getCurrentYear();
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-white hero dark:bg-slate-800">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-white hero dark:bg-slate-800 animate__animated animate__fadeIn">
       <div className="flex-grow text-center hero-content">
         <div className="max-w-md">
           <h1 className="mb-5 text-3xl font-black sm:text-6xl">Elmer Jacobo</h1>
@@ -30,7 +30,7 @@ export default function Home() {
               <FaGithub size={24} />
             </a>
           </div>
-          <button className="gap-1 mt-10 btn btn-primary">
+          <button className="gap-1 mt-10 btn btn-primary animate-pulse">
             <HiOutlineDownload size={20} />
             Descargar CV
           </button>

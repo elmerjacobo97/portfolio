@@ -38,7 +38,7 @@ export const CardProject = ({
 
   return (
     <div
-      className="transition-all shadow-lg card hover:shadow-xl"
+      className="transition-all shadow-lg card hover:shadow-xl animate__animated animate__fadeIn"
       ref={cardRef}
     >
       <figure>

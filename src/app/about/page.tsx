@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function About() {
   return (
-    <div className="min-h-screen py-20 bg-white dark:bg-slate-800">
+    <div className="min-h-screen py-20 bg-white dark:bg-slate-800 animate__animated animate__fadeIn">
       <h1 className="text-4xl font-black text-center md:text-6xl text-primary">
         Sobre mí
       </h1>
