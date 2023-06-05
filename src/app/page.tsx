@@ -12,7 +12,9 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center min-h-screen bg-white hero dark:bg-slate-800 animate__animated animate__fadeIn">
       <div className="flex-grow text-center hero-content">
         <div className="max-w-md">
-          <h1 className="mb-5 text-3xl font-black sm:text-6xl">Elmer Jacobo</h1>
+          <h1 className="mb-5 text-3xl font-black text-transparent sm:text-6xl bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text">
+            Elmer Jacobo
+          </h1>
           <h2 className="mt-3 text-xl font-black sm:text-3xl">
             Soy <TypingEffect texts={texts} speed={150} />
           </h2>
