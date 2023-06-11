@@ -38,8 +38,8 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <footer className="flex items-center justify-center py-4 text-gray-500 dark:text-gray-400">
-        <RiCopyrightLine className="mr-1" />
+      <footer className="absolute bottom-0 flex items-center justify-center w-full p-4 text-gray-500 dark:text-gray-400">
+        <RiCopyrightLine className="mr-1" size={20} />
         {currentYear} Elmer Jacobo. Todos los derechos reservados.
       </footer>
     </div>

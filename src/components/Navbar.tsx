@@ -61,6 +61,7 @@ export const Navbar = () => {
               width={100}
               height={100}
               className="rounded-full"
+              priority
               alt="Image Profile"
             />
           </div>
