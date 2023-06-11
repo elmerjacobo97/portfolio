@@ -13,7 +13,7 @@ export default function Projects() {
         <div className="grid grid-cols-1 gap-5 mt-10 sm:grid-cols-2 md:grid-cols-3">
           <CardProject
             imageSrc="/images/projects/pokemon-game.png"
-            imageAlt="CountryApp"
+            imageAlt="Pokémon Game"
             title="Pokémon Game: Adivina y Entrena con los Pokémon"
             description="Pokémon Game es una emocionante aplicación web diseñada para entrenar tus habilidades de reconocimiento de Pokémon. Pon a prueba tus conocimientos y agudiza tu intuición adivinando los diferentes Pokémon que se te presentarán. ¡Sumérgete en el fascinante mundo de los Pokémon y mejora tu capacidad para identificar a estas criaturas únicas!"
             technologies="Vue.js, JavaScript, CSS"
@@ -22,7 +22,7 @@ export default function Projects() {
           />
           <CardProject
             imageSrc="/images/projects/foxbel-music.png"
-            imageAlt="CountryApp"
+            imageAlt="Foxbel Music"
             title="Foxbel Music: Descubre, Explora y Disfruta de la Mejor Música"
             description="Foxbel Music es una emocionante aplicación web que te permite descubrir, explorar y disfrutar de una amplia selección de canciones, álbumes y artistas. Con la capacidad de consumir la API de Deezer, tendrás acceso a un extenso catálogo musical en tus manos."
             technologies="React, TypeScript, Tailwind"
