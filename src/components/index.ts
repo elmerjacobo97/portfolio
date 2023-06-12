@@ -7,6 +7,7 @@ import { ToggleThemeButton } from './ToggleThemeButton';
 import { TypingEffect } from './TypingEffect';
 import { SkillItem } from './SkillItem';
 import { CardProject } from './CardProject';
+import { Toast } from './Toast';
 
 export {
   Navbar,
@@ -16,4 +17,5 @@ export {
   TypingEffect,
   SkillItem,
   CardProject,
+  Toast,
 };

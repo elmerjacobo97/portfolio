@@ -1,3 +1,6 @@
+'use client';
+import { Toast } from '@/components';
+import { useFormValidation } from '../hooks';
 import {
   HiOutlineUser,
   HiOutlineMail,
@@ -7,6 +10,16 @@ import {
 } from 'react-icons/hi';
 
 export default function Contact() {
+  const {
+    errors,
+    formData,
+    isMessageSent,
+    isLoading,
+    hasError,
+    handleChange,
+    handleSubmit,
+  } = useFormValidation();
+
   return (
     <div className="min-h-screen py-20 bg-white dark:bg-slate-800 animate__animated animate__fadeIn">
       <h1 className="text-4xl font-black text-center md:text-6xl">
@@ -16,7 +29,11 @@ export default function Contact() {
       </h1>
 
       <div className="max-w-6xl px-4 mx-auto">
-        <form className="max-w-md mx-auto mt-10 space-y-6">
+        <form
+          className="max-w-md mx-auto mt-10 space-y-6"
+          onSubmit={handleSubmit}
+          noValidate
+        >
           <div className="w-full form-control">
             <label className="label" htmlFor="name">
               <span className="flex items-center label-text">
@@ -28,8 +45,16 @@ export default function Contact() {
               type="text"
               id="name"
               placeholder="Ingrese su nombre"
-              className="w-full bg-white dark:bg-slate-800 input input-bordered"
+              className={`w-full bg-white dark:bg-slate-800 input input-bordered ${
+                errors.name ? 'input-error' : ''
+              }`}
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
             />
+            <span className="text-sm text-red-500 label-text-alt">
+              {errors.name}
+            </span>
           </div>
           <div className="w-full form-control">
             <label className="label" htmlFor="email">
@@ -42,8 +67,16 @@ export default function Contact() {
               type="email"
               id="email"
               placeholder="Ingrese su email"
-              className="w-full bg-white dark:bg-slate-800 input input-bordered"
+              className={`w-full bg-white dark:bg-slate-800 input input-bordered ${
+                errors.email ? 'input-error' : ''
+              }`}
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
             />
+            <span className="text-sm text-red-500 label-text-alt">
+              {errors.email}
+            </span>
           </div>
           <div className="w-full form-control">
             <label className="label" htmlFor="tel">
@@ -56,8 +89,16 @@ export default function Contact() {
               type="tel"
               id="tel"
               placeholder="Ingrese su teléfono"
-              className="w-full bg-white dark:bg-slate-800 input input-bordered"
+              className={`w-full bg-white dark:bg-slate-800 input input-bordered ${
+                errors.phone ? 'input-error' : ''
+              }`}
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
             />
+            <span className="text-sm text-red-500 label-text-alt">
+              {errors.phone}
+            </span>
           </div>
           <div className="w-full form-control">
             <label className="label" htmlFor="message">
@@ -68,9 +109,17 @@ export default function Contact() {
             </label>
             <textarea
               id="message"
-              className="h-48 bg-white textarea textarea-bordered dark:bg-slate-800"
+              className={`w-full bg-white dark:bg-slate-800 h-40 textarea textarea-bordered ${
+                errors.message ? 'textarea-error' : ''
+              }`}
               placeholder="Ingrese su mensaje"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
             ></textarea>
+            <span className="text-sm text-red-500 label-text-alt">
+              {errors.message}
+            </span>
           </div>
           <div className="w-full form-control">
             <button
@@ -78,9 +127,21 @@ export default function Contact() {
               className="flex items-center justify-center gap-2 btn btn-success"
             >
               <HiOutlinePaperAirplane className="mr-2" size={25} />
-              Contactar
+              {isLoading ? 'Enviando...' : 'Contactar'}
             </button>
           </div>
+          {isMessageSent && (
+            <Toast
+              type="success"
+              message="¡El mensaje se envió correctamente!"
+            />
+          )}
+          {hasError && (
+            <Toast
+              type="error"
+              message="¡Ocurrió un error al enviar el mensaje!"
+            />
+          )}
         </form>
       </div>
     </div>
