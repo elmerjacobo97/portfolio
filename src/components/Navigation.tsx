@@ -32,11 +32,6 @@ export const Navigation = ({ closeDropdown }: Props) => {
           Contacto
         </Link>
       </li>
-      <li>
-        <Link href={'/blog'} onClick={closeDropdown}>
-          Blog
-        </Link>
-      </li>
     </>
   );
 };
