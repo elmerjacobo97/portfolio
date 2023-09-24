@@ -1,26 +1,19 @@
 import Link from 'next/link';
+import { HiCode } from 'react-icons/hi';
 
 export const Logo = () => {
   return (
-    <Link href="/" className="flex items-center">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="mr-2 w-9 h-9 text-primary dark:text-success"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z"
-        />
-      </svg>
-
-      <span className="text-xl font-semibold text-primary dark:text-success">
-        Developer
-      </span>
+    <Link href="/">
+      <div className="flex items-center p-3 transition-all duration-300 ease-in-out transform rounded-full cursor-pointer bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 hover:shadow-2xl hover:bg-opacity-90 hover:scale-110">
+        <div className="relative">
+          <HiCode className="absolute -top-0.5 -left-0.5 text-4xl text-white transition-transform duration-600 ease-in-out transform hover:scale-110 hover:-rotate-12" />
+          <HiCode className="text-3xl text-white transition-transform ease-in-out transform duration-600 hover:scale-110 hover:rotate-12" />
+        </div>
+        <span className="ml-3 text-lg font-extrabold text-white transition-transform duration-300 ease-in-out transform hover:scale-105">
+          Elmer
+          <span className="font-light">JS</span>
+        </span>
+      </div>
     </Link>
   );
 };

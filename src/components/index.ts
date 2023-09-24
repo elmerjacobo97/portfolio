@@ -8,6 +8,7 @@ import { TypingEffect } from './TypingEffect';
 import { SkillItem } from './SkillItem';
 import { CardProject } from './CardProject';
 import { Toast } from './Toast';
+import { Footer } from './Footer';
 
 export {
   Navbar,
@@ -18,4 +19,5 @@ export {
   SkillItem,
   CardProject,
   Toast,
+  Footer,
 };

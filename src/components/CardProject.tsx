@@ -42,36 +42,56 @@ export const CardProject = ({
     }
   }, []);
 
+  // Convertir la cadena de tecnologías en un array
+  const techArray = technologies.split(', ');
+
   return (
     <div
-      className="transition-all border shadow-lg border-slate-200 dark:border-slate-700 card card-compact hover:shadow-xl animate__animated animate__fadeIn"
+      className="transition-all duration-300 ease-in-out rounded-lg shadow-lg dark:bg-slate-800 card card-compact hover:shadow-2xl animate__animated animate__fadeIn"
       ref={cardRef}
     >
-      <figure className="w-full">
-        <Image src={imageSrc} width={400} height={400} alt={imageAlt} />
+      <figure className="overflow-hidden rounded-t-lg">
+        <Image src={imageSrc} width={500} height={550} alt={imageAlt} />
       </figure>
       <div className="flex flex-col justify-between p-4 card-body">
         <div>
-          <h2 className="text-xl font-bold card-title">{title}</h2>
-          <p className="mt-2 text-sm">{description}</p>
-          <h2 className="mt-4 text-lg font-bold">Tecnologías</h2>
-          <p className="text-sm">{technologies}</p>
+          <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-300 card-title">
+            {title}
+          </h2>
+          <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+            {description}
+          </p>
+          <h2 className="mt-4 text-lg font-semibold text-gray-700 dark:text-gray-300">
+            Tecnologías
+          </h2>
+          <div className="flex flex-wrap mt-2">
+            {techArray.map((tech, index) => (
+              <span
+                key={index}
+                className="items-center px-2 py-1 mb-2 mr-2 text-gray-600 bg-gray-200 rounded-full dark:text-gray-400 dark:bg-gray-700"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between mt-4">
           <a
-            className="mr-2 capitalize btn btn-sm btn-success"
+            className="flex items-center px-3 py-2 text-sm text-white bg-green-600 rounded-md hover:bg-green-700 dark:hover:bg-green-800"
             href={seeCode}
-            target="_blank noreferrer noopener"
+            target="_blank"
+            rel="noreferrer noopener"
           >
-            <HiCode size={20} style={{ marginRight: '5px' }} />
+            <HiCode size={20} className="mr-1" />
             Ver código
           </a>
           <a
-            className="capitalize btn btn-sm btn-primary"
+            className="flex items-center px-3 py-2 text-sm text-white bg-blue-600 rounded-md hover:bg-blue-700 dark:hover:bg-blue-800"
             href={visiteSite}
-            target="_blank noreferrer noopener"
+            target="_blank"
+            rel="noreferrer noopener"
           >
-            <HiExternalLink size={20} style={{ marginRight: '5px' }} />
+            <HiExternalLink size={20} className="mr-1" />
             Visitar sitio
           </a>
         </div>

@@ -1,6 +1,6 @@
 'use client';
 import { Toast } from '@/components';
-import { useFormValidation } from '../hooks';
+import { useFormValidation } from '../../hooks';
 import {
   HiOutlineUser,
   HiOutlineMail,

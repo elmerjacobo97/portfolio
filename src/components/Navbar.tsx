@@ -16,7 +16,7 @@ export const Navbar = () => {
         <div className="dropdown">
           <label
             tabIndex={0}
-            className="btn btn-ghost lg:hidden"
+            className="btn btn-ghost md:hidden"
             onClick={() => setDropdownOpen(!isDropdownOpen)}
           >
             <svg
@@ -36,19 +36,19 @@ export const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className={`mt-3 w-52 p-2 shadow menu dropdown-content rounded-box bg-slate-200 dark:bg-slate-800 ${
+            className={`mt-3 w-52 p-2 shadow menu dropdown-content rounded-box h-56 max-h-60 bg-slate-200 dark:bg-slate-700 ${
               isDropdownOpen ? 'block' : 'hidden'
             }`}
           >
             <Navigation closeDropdown={closeDropdown} />
           </ul>
         </div>
-        <div className="hidden sm:flex">
+        <div className="hidden md:flex">
           <Logo />
         </div>
       </div>
-      <div className="hidden navbar-center lg:flex">
-        <ul className="px-1 menu menu-horizontal">
+      <div className="hidden navbar-center md:flex">
+        <ul className="gap-2 menu menu-horizontal ">
           <Navigation closeDropdown={closeDropdown} />
         </ul>
       </div>

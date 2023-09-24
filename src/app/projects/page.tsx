@@ -17,8 +17,8 @@ export default function Projects() {
             title="Pokémon Game: Adivina y Entrena con los Pokémon"
             description="Pokémon Game es una emocionante aplicación web diseñada para entrenar tus habilidades de reconocimiento de Pokémon. Pon a prueba tus conocimientos y agudiza tu intuición adivinando los diferentes Pokémon que se te presentarán. ¡Sumérgete en el fascinante mundo de los Pokémon y mejora tu capacidad para identificar a estas criaturas únicas!"
             technologies="Vue.js, JavaScript, CSS"
-            seeCode=""
-            visiteSite=""
+            seeCode="https://github.com/elmerjacobo97/pokemon-static"
+            visiteSite="https://pokemons-next.vercel.app/"
           />
           <CardProject
             imageSrc="/images/projects/foxbel-music.png"

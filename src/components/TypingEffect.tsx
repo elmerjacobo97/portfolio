@@ -1,5 +1,5 @@
-"use client";
-import { FC, useEffect, useState } from "react";
+'use client';
+import { FC, useEffect, useState } from 'react';
 
 interface TypingEffectProps {
   texts: string[];
@@ -7,7 +7,7 @@ interface TypingEffectProps {
 }
 
 export const TypingEffect: FC<TypingEffectProps> = ({ texts, speed }) => {
-  const [displayedText, setDisplayedText] = useState("");
+  const [displayedText, setDisplayedText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTypingComplete, setIsTypingComplete] = useState(false);
 
@@ -57,10 +57,10 @@ export const TypingEffect: FC<TypingEffectProps> = ({ texts, speed }) => {
 
   return (
     <>
-      <span className="text-success border-b-2 border-success">
+      <span className="text-2xl font-semibold text-blue-300 transition-all duration-500 ease-in-out transform dark:text-blue-400 hover:scale-110">
         {displayedText}
       </span>
-      <span className="text-success border-b-2 border-success animate-pulse">
+      <span className="inline-block text-2xl font-semibold text-blue-300 duration-700 dark:text-blue-400 animate-ping">
         |
       </span>
     </>

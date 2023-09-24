@@ -1,13 +1,17 @@
 import { texts } from '@/helpers';
 import { TypingEffect } from '@/components';
 import { HiOutlineDownload } from 'react-icons/hi';
-import { FaTwitter, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
-import { RiCopyrightLine } from 'react-icons/ri';
-import { getCurrentYear } from '../helpers';
+import {
+  FaTwitter,
+  FaLinkedin,
+  FaGithub,
+  FaEnvelope,
+  FaWhatsapp,
+} from 'react-icons/fa';
+
+import { Footer } from '../components/Footer';
 
 export default function Home() {
-  const currentYear = getCurrentYear();
-
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white hero dark:bg-slate-800 animate__animated animate__fadeIn">
       <div className="flex-grow text-center hero-content">
@@ -15,33 +19,60 @@ export default function Home() {
           <h1 className="mb-5 text-3xl font-black text-transparent sm:text-6xl bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text">
             Elmer Jacobo
           </h1>
-          <h2 className="mt-3 text-xl font-black sm:text-3xl">
-            Soy <TypingEffect texts={texts} speed={150} />
+          <p className="text-base sm:text-lg">
+            Desarrollador de software apasionado por la tecnología y la
+            innovación.
+          </p>
+          <h2 className="mt-3 text-xl font-black text-blue-300 dark:text-blue-400 sm:text-3xl">
+            <span className="block">¿Qué hago?</span>
+            <TypingEffect texts={texts} speed={100} />
           </h2>
+
           <div className="flex justify-center mt-10 space-x-6">
-            <a href="#" className="btn btn-circle btn-accent btn-outline">
+            <a
+              href="https://twitter.com/elmer_jac97"
+              className="transition duration-200 ease-in-out btn btn-circle btn-accent btn-outline hover:bg-blue-500 hover:text-white focus:ring focus:ring-blue-200"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <FaTwitter size={24} />
             </a>
-            <a href="#" className="btn btn-circle btn-accent btn-outline">
-              <FaInstagram size={24} />
-            </a>
-            <a href="#" className="btn btn-circle btn-accent btn-outline">
+
+            <a
+              href="https://www.linkedin.com/in/elmjacobo/"
+              className="transition duration-200 ease-in-out btn btn-circle btn-accent btn-outline hover:bg-blue-700 hover:text-white focus:ring focus:ring-blue-200"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <FaLinkedin size={24} />
             </a>
-            <a href="#" className="btn btn-circle btn-accent btn-outline">
+
+            <a
+              href="https://github.com/elmerjacobo97"
+              className="transition duration-200 ease-in-out btn btn-circle btn-accent btn-outline hover:bg-gray-800 hover:text-white focus:ring focus:ring-gray-200"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <FaGithub size={24} />
             </a>
+
+            <a
+              href="https://wa.me/+51927347691"
+              className="transition duration-200 ease-in-out btn btn-circle btn-accent btn-outline hover:bg-green-500 hover:text-white focus:ring focus:ring-green-200"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <FaWhatsapp size={24} />
+            </a>
           </div>
-          <button className="gap-1 mt-10 btn btn-primary animate-pulse">
+
+          <button className="gap-1 mt-10 btn btn-primary ">
             <HiOutlineDownload size={20} />
             Descargar CV
           </button>
         </div>
       </div>
-      <footer className="absolute bottom-0 flex items-center justify-center w-full p-4 text-gray-500 dark:text-gray-400">
-        <RiCopyrightLine className="mr-1" size={20} />
-        {currentYear} Elmer Jacobo. Todos los derechos reservados.
-      </footer>
+      <Footer />
     </div>
   );
 }

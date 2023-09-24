@@ -41,7 +41,7 @@ export const SkillItem = ({ skills }: SkillItemProps) => {
       {skills.map((skill, index) => (
         <div
           key={index}
-          className="flex items-center p-4 mb-4 space-x-4 transition-all shadow-lg rounded-xl hover:scale-105 hover:shadow-xl animate__animated animate__fadeIn"
+          className="flex items-center p-4 mb-4 space-x-4 transition-transform duration-300 ease-in-out bg-white shadow-md dark:shadow-lg dark:bg-gray-800 rounded-xl hover:scale-105 hover:shadow-xl animate__animated animate__fadeIn"
         >
           <div className="flex-shrink-0">
             {createElement(skillIcons[skill.name].icon as IconType, {
@@ -50,10 +50,12 @@ export const SkillItem = ({ skills }: SkillItemProps) => {
             })}
           </div>
           <div className="flex-grow">
-            <p className="text-lg font-medium">{skill.name}</p>
-            <div className="h-2 overflow-hidden bg-gray-300 rounded-full">
+            <p className="text-lg font-medium text-gray-800 dark:text-gray-200">
+              {skill.name}
+            </p>
+            <div className="relative h-2 overflow-hidden bg-gray-300 rounded-full dark:bg-gray-700">
               <div
-                className="h-full transition-all bg-success animate-pulse"
+                className="absolute h-full transition-all bg-green-400 dark:bg-green-500 animate-pulse"
                 style={{ width: `${skill.value}%` }}
               ></div>
             </div>

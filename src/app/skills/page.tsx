@@ -6,7 +6,7 @@ import {
   otherSkills,
   designSkills,
 } from '@/helpers';
-import { SkillItem } from '@/components';
+import { SkillItem, Footer } from '@/components';
 
 export default function Skills() {
   return (

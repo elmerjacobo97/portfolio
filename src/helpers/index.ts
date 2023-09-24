@@ -34,10 +34,10 @@ interface SkillIcons {
 }
 
 export const texts = [
-  'Frontend Developer',
-  'Backend Developer',
-  'FullStack Developer',
-  'Mobile Developer',
+  'Desarrollo interfaces de usuario',
+  'Creo lógica de servidor',
+  'Trabajo en proyectos FullStack',
+  'Desarrollo aplicaciones móviles',
 ];
 
 export const designSkills = [
