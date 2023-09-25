@@ -7,11 +7,11 @@ export const Footer = () => {
   return (
     <footer className="flex flex-col items-center justify-center w-full py-6 text-gray-500 bg-gray-200 dark:bg-gray-900 dark:text-gray-300">
       <div className="flex flex-col justify-between w-full px-10 space-y-4 sm:space-y-0 sm:flex-row sm:justify-center sm:items-center sm:space-x-10 md:space-x-20">
-        <div className="mb-4 text-center">
+        <div className="hidden text-center md:block ">
           <strong className="block mb-2">Ubicación</strong>
           Trujillo, Perú
         </div>
-        <div className="mb-4 italic text-center">
+        <div className="hidden mb-4 italic text-center md:block">
           &ldquo;La innovación distingue a un líder de un seguidor.&rdquo; -
           Steve Jobs
         </div>

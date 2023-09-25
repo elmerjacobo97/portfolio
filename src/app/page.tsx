@@ -1,13 +1,7 @@
 import { texts } from '@/helpers';
 import { TypingEffect } from '@/components';
 import { HiOutlineDownload } from 'react-icons/hi';
-import {
-  FaTwitter,
-  FaLinkedin,
-  FaGithub,
-  FaEnvelope,
-  FaWhatsapp,
-} from 'react-icons/fa';
+import { FaTwitter, FaLinkedin, FaGithub, FaWhatsapp } from 'react-icons/fa';
 
 import { Footer } from '../components/Footer';
 
@@ -16,14 +10,14 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center min-h-screen bg-white hero dark:bg-slate-800 animate__animated animate__fadeIn">
       <div className="flex-grow text-center hero-content">
         <div className="max-w-md">
-          <h1 className="my-10 mt-5 text-3xl font-black text-transparent sm:mt-0 sm:text-6xl bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text">
+          <h1 className="my-10 text-3xl font-black text-transparent sm:mt-0 sm:text-6xl bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text">
             Elmer Jacobo
           </h1>
           <p className="text-base sm:text-lg">
             Desarrollador de software apasionado por la tecnología y la
             innovación.
           </p>
-          <h2 className="mt-3 text-xl font-black text-blue-300 dark:text-blue-400 sm:text-3xl">
+          <h2 className="mt-5 text-xl font-black text-blue-300 dark:text-blue-400 sm:text-4xl">
             <span className="block">¿Qué hago?</span>
             <TypingEffect texts={texts} speed={100} />
           </h2>

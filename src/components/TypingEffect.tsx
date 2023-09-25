@@ -57,7 +57,7 @@ export const TypingEffect: FC<TypingEffectProps> = ({ texts, speed }) => {
 
   return (
     <>
-      <span className="text-2xl font-semibold text-blue-300 transition-all duration-500 ease-in-out transform dark:text-blue-400 hover:scale-110">
+      <span className="font-semibold text-blue-300 transition-all duration-500 ease-in-out transform sm:text-2xl dark:text-blue-400 hover:scale-110">
         {displayedText}
       </span>
       <span className="inline-block text-2xl font-semibold text-blue-300 duration-700 dark:text-blue-400 animate-ping">
