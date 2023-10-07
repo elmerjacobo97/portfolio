@@ -124,10 +124,17 @@ export default function Contact() {
           <div className="w-full form-control">
             <button
               type="submit"
-              className="flex items-center justify-center gap-2 btn btn-success"
+              className={`btn btn-success ${isLoading ? 'btn-disabled' : ''}`}
+              disabled={isLoading}
             >
-              <HiOutlinePaperAirplane className="mr-2" size={25} />
-              {isLoading ? 'Enviando...' : 'Contactar'}
+              {isLoading ? (
+                <span className="loading loading-spinner"></span>
+              ) : (
+                <>
+                  <HiOutlinePaperAirplane className="mr-2" size={25} />
+                  Contactar
+                </>
+              )}
             </button>
           </div>
           {isMessageSent && (

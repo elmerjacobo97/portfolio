@@ -11,7 +11,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 h-16 shadow md:px-10 bg-slate-200 navbar dark:bg-slate-800">
+    <nav className="fixed inset-x-0 top-0 z-50 h-16 text-gray-500 shadow md:px-10 bg-slate-200 navbar dark:text-gray-300 dark:bg-gray-900">
       <div className="navbar-start">
         <div className="dropdown">
           <label

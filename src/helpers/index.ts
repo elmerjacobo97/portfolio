@@ -126,3 +126,99 @@ export const skillIcons: SkillIcons = {
 export function getCurrentYear() {
   return new Date().getFullYear();
 }
+
+export const quotes = [
+  {
+    text: 'La innovación distingue a un líder de un seguidor.',
+    author: 'Steve Jobs',
+  },
+  {
+    text: 'El futuro pertenece a quienes creen en la belleza de sus sueños.',
+    author: 'Eleanor Roosevelt',
+  },
+  {
+    text: 'El único modo de hacer un gran trabajo es amar lo que haces.',
+    author: 'Steve Jobs',
+  },
+  {
+    text: 'La vida es lo que pasa mientras estás ocupado haciendo otros planes.',
+    author: 'John Lennon',
+  },
+  {
+    text: 'La mejor forma de predecir el futuro es inventándolo.',
+    author: 'Alan Kay',
+  },
+  {
+    text: 'Primero resuelve el problema. Luego, escribe el código.',
+    author: 'John Johnson',
+  },
+  {
+    text: 'La simplicidad es la última sofisticación.',
+    author: 'Leonardo da Vinci',
+  },
+  {
+    text: 'Todo debería hacerse tan simple como sea posible, pero no más simple.',
+    author: 'Albert Einstein',
+  },
+  {
+    text: 'La mejor manera de prever el futuro es implementarlo.',
+    author: 'Alan Curtis Kay',
+  },
+  {
+    text: 'Hablar es barato. Muéstrame el código.',
+    author: 'Linus Torvalds',
+  },
+  {
+    text: 'Programar no es una habilidad para escribir, es una habilidad para resolver problemas.',
+    author: 'Richard Pattis',
+  },
+  {
+    text: 'La verdad puede ser declarada solo por, no de, una máquina programable.',
+    author: 'Alan Perlis',
+  },
+  {
+    text: 'El código es como el humor. Cuando lo tienes que explicar, es malo.',
+    author: 'Cory House',
+  },
+  {
+    text: 'El código es poesía.',
+    author: 'WordPress',
+  },
+  {
+    text: 'La pregunta no es si vas a tener un problema, sino cuándo lo tendrás.',
+    author: 'Kevin Systrom',
+  },
+  {
+    text: 'Nunca confíes en un ordenador que no puedas lanzar por una ventana.',
+    author: 'Steve Wozniak',
+  },
+  {
+    text: 'Los errores deberían costar caro para que no se cometan de nuevo.',
+    author: 'Thomas J. Watson',
+  },
+  {
+    text: 'La gente piensa que la informática es la ciencia de los ordenadores. Pero en realidad es la ciencia de la solución de problemas.',
+    author: 'H. Gilbert',
+  },
+  {
+    text: 'Hazlo, arréglalo, intenta hacerlo otra vez.',
+    author: 'Linda Rising',
+  },
+  {
+    text: 'Sólo los tontos usan la palabra "imposible".',
+    author: 'Michio Kaku',
+  },
+];
+
+export const animations = [
+  'animate__fadeIn',
+  'animate__fadeInUp',
+  'animate__fadeInDown',
+  'animate__lightSpeedInRight',
+  'animate__lightSpeedInLeft',
+  'animate__flipInX',
+  'animate__flipInY',
+  'animate__pulse',
+  'animate__flash',
+  'animate__bounce',
+];

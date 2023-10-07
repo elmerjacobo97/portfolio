@@ -19,40 +19,79 @@ export function useFormValidation() {
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = event.target;
-    setFormData((prevFormData) => ({
-      ...prevFormData,
+    setFormData((prevData) => ({
+      ...prevData,
       [name]: value,
     }));
+
+    validateField(name as keyof FormData, value);
   };
 
-  const validateForm = () => {
-    const validationErrors: FormErrors = {};
-
-    // Validar campos
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const validateField = (name: keyof FormData, value: string): string => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const phoneRegex =
       /^(\+|00)?(\d{1,3})?[ -]?\(?\d{1,4}\)?[ -]?\d{1,4}[ -]?\d{1,9}$/;
 
-    if (formData.name.trim() === '') {
-      validationErrors.name = 'Ingrese su nombre';
+    let errorMessage = '';
+
+    switch (name) {
+      case 'name':
+        if (value.trim() === '') {
+          errorMessage = 'Ingrese su nombre';
+        } else if (value.length < 3) {
+          errorMessage = 'El nombre debe tener al menos 3 caracteres';
+        } else if (value.length > 50) {
+          errorMessage = 'El nombre no debe superar los 50 caracteres';
+        } else {
+          errorMessage = '';
+        }
+        break;
+      case 'email':
+        errorMessage =
+          value.trim() === ''
+            ? 'Ingrese su email'
+            : !emailRegex.test(value)
+            ? 'Ingrese un email válido'
+            : '';
+        break;
+      case 'phone':
+        errorMessage =
+          value.trim() === ''
+            ? 'Ingrese su teléfono'
+            : !phoneRegex.test(value)
+            ? 'Ingrese un número de teléfono válido'
+            : '';
+        break;
+      case 'message':
+        if (value.trim() === '') {
+          errorMessage = 'Ingrese su mensaje';
+        } else if (value.length < 20) {
+          errorMessage = 'El mensaje debe tener al menos 20 caracteres';
+        } else if (value.length > 500) {
+          errorMessage = 'El mensaje no debe superar los 500 caracteres';
+        } else {
+          errorMessage = '';
+        }
+        break;
     }
 
-    if (formData.email.trim() === '') {
-      validationErrors.email = 'Ingrese su email';
-    } else if (!emailRegex.test(formData.email)) {
-      validationErrors.email = 'Ingrese un email válido';
-    }
+    setErrors((prevErrors) => ({ ...prevErrors, [name]: errorMessage }));
 
-    if (formData.phone.trim() === '') {
-      validationErrors.phone = 'Ingrese su teléfono';
-    } else if (!phoneRegex.test(formData.phone.trim())) {
-      validationErrors.phone = 'Ingrese un número de teléfono válido';
-    }
+    return errorMessage;
+  };
 
-    if (formData.message.trim() === '') {
-      validationErrors.message = 'Ingrese su mensaje';
-    }
+  const validateForm = () => {
+    let validationErrors: FormErrors = {};
 
+    for (const fieldName in formData) {
+      if (Object.prototype.hasOwnProperty.call(formData, fieldName)) {
+        const fieldValue = formData[fieldName as keyof FormData];
+        const error = validateField(fieldName as keyof FormData, fieldValue);
+        if (error) {
+          validationErrors = { ...validationErrors, [fieldName]: error };
+        }
+      }
+    }
     setErrors(validationErrors);
     return validationErrors;
   };
