@@ -10,7 +10,7 @@ export const Toast: React.FC<ToastProps> = ({ type, message }) => {
   const alertClass = type === 'success' ? 'alert-success' : 'alert-error';
 
   return (
-    <div className="toast">
+    <div className="toast toast-end">
       <div
         className={`flex flex-row items-center justify-center alert ${alertClass}`}
       >
