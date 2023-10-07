@@ -24,6 +24,14 @@ import {
   SiTailwindcss,
   SiMaterialdesign,
   SiSass,
+  SiFigma,
+  SiPostgresql,
+  SiAstro,
+  SiSvelte,
+  SiFastify,
+  SiSwift,
+  SiKotlin,
+  SiVite,
 } from 'react-icons/si';
 import { FaAngular, FaDatabase, FaNodeJs, FaReact } from 'react-icons/fa';
 import { IoLogoJavascript, IoLogoVue } from 'react-icons/io5';
@@ -41,55 +49,64 @@ export const texts = [
 ];
 
 export const designSkills = [
-  { name: 'HTML', value: 90 },
-  { name: 'CSS', value: 75 },
-  { name: 'Bootstrap', value: 80 },
-  { name: 'Tailwind CSS', value: 80 },
-  { name: 'Material UI', value: 60 },
-  { name: 'Sass', value: 60 },
+  { name: 'HTML', value: 90, description: 'Estructura de páginas web.' },
+  { name: 'CSS', value: 75, description: 'Estilo y diseño web.' },
+  { name: 'Bootstrap', value: 80, description: 'Framework CSS.' },
+  { name: 'Tailwind CSS', value: 80, description: 'Utilidades CSS.' },
+  { name: 'Material UI', value: 60, description: 'UI React Framework.' },
+  { name: 'Sass', value: 60, description: 'Preprocesador CSS.' },
+  { name: 'Figma', value: 55, description: 'Diseño de interfaz.' },
 ];
 
 export const frontendSkills = [
-  { name: 'JavaScript', value: 80 },
-  { name: 'TypeScript', value: 70 },
-  { name: 'React', value: 90 },
-  { name: 'Next.js', value: 90 },
-  { name: 'Angular', value: 60 },
-  { name: 'Vue.js', value: 70 },
+  { name: 'JavaScript', value: 80, description: 'Lenguaje web.' },
+  { name: 'TypeScript', value: 70, description: 'JS tipado.' },
+  { name: 'React', value: 90, description: 'Librería UI.' },
+  { name: 'Next.js', value: 90, description: 'Framework React.' },
+  { name: 'Angular', value: 60, description: 'Framework Google.' },
+  { name: 'Astro', value: 65, description: 'Renderizado estático.' },
+  { name: 'Svelte', value: 30, description: 'Compilador de UI.' },
 ];
 
 export const backendSkills = [
-  { name: 'Node.js', value: 75 },
-  { name: 'Express', value: 70 },
-  { name: 'Nest.js', value: 80 },
-  { name: 'PHP', value: 40 },
-  { name: 'Laravel', value: 80 },
-  { name: 'Django', value: 30 },
+  { name: 'Node.js', value: 75, description: 'JS en servidor.' },
+  { name: 'Express', value: 70, description: 'Framework Node.js.' },
+  { name: 'Nest.js', value: 40, description: 'Framework Node.js.' },
+  { name: 'PHP', value: 40, description: 'Script en servidor.' },
+  { name: 'Laravel', value: 40, description: 'Framework PHP.' },
+  { name: 'Django', value: 15, description: 'Framework Python.' },
+  { name: 'Fastify', value: 15, description: 'Rápido framework Node.js.' },
 ];
 
 export const mobileSkills = [
-  { name: 'Flutter', value: 70 },
-  { name: 'React Native', value: 80 },
-  { name: 'Ionic', value: 30 },
+  { name: 'React Native', value: 80, description: 'React para móviles.' },
+  { name: 'Flutter', value: 50, description: 'SDK móvil.' },
+  { name: 'Ionic', value: 30, description: 'Desarrollo multiplataforma.' },
+  { name: 'Swift', value: 10, description: 'Desarrollo iOS nativo.' },
+  { name: 'Kotlin', value: 12, description: 'Desarrollo Android nativo.' },
 ];
 
 export const databaseSkills = [
-  { name: 'MySQL', value: 80 },
-  { name: 'SQLite', value: 70 },
-  { name: 'MongoDB', value: 70 },
-  { name: 'Firebase', value: 75 },
-  { name: 'Microsoft SQL Server', value: 35 },
+  { name: 'MySQL', value: 80, description: 'DB relacional.' },
+  { name: 'SQLite', value: 70, description: 'DB embebida.' },
+  { name: 'MongoDB', value: 70, description: 'DB NoSQL.' },
+  { name: 'Firebase', value: 75, description: 'Backend como servicio.' },
+  { name: 'Microsoft SQL Server', value: 35, description: 'DB relacional.' },
+  { name: 'PostgreSQL', value: 60, description: 'DB relacional.' },
 ];
 
 export const otherSkills = [
-  { name: 'Mongoose', value: 70 },
-  { name: 'Sequelize', value: 50 },
-  { name: 'Docker', value: 70 },
-  { name: 'Git', value: 80 },
-  { name: 'Webpack', value: 60 },
+  { name: 'Mongoose', value: 70, description: 'ORM para MongoDB.' },
+  { name: 'Sequelize', value: 50, description: 'ORM para SQL.' },
+  { name: 'Docker', value: 70, description: 'Contenedorización.' },
+  { name: 'Git', value: 80, description: 'Control de versiones.' },
+  { name: 'Webpack', value: 60, description: 'Empaquetador.' },
+  { name: 'Vite', value: 65, description: 'Empaquetador moderno.' },
 ];
 
 export const skillIcons: SkillIcons = {
+  Figma: { icon: SiFigma, color: '#F24E1E' },
+  PostgreSQL: { icon: SiPostgresql, color: '#336791' },
   JavaScript: { icon: IoLogoJavascript, color: '#F7DF1E' },
   TypeScript: { icon: SiTypescript, color: '#007ACC' },
   React: { icon: FaReact, color: '#61DAFB' },
@@ -108,7 +125,6 @@ export const skillIcons: SkillIcons = {
   Sequelize: { icon: SiSequelize, color: '#52B0E7' },
   Docker: { icon: SiDocker, color: '#2496ED' },
   Git: { icon: SiGit, color: '#F05032' },
-  'Vue.js': { icon: IoLogoVue, color: '#4FC08D' },
   'React Native': { icon: TbBrandReactNative, color: '#61DAFB' },
   Flutter: { icon: SiFlutter, color: '#3B82F6' },
   Ionic: { icon: SiIonic, color: '#176BFF' },
@@ -121,6 +137,12 @@ export const skillIcons: SkillIcons = {
   'Tailwind CSS': { icon: SiTailwindcss, color: '#00ADB5' },
   'Material UI': { icon: SiMaterialdesign, color: '#673AB7' },
   Sass: { icon: SiSass, color: '#CC6699' },
+  Astro: { icon: SiAstro, color: '#F5A623' },
+  Svelte: { icon: SiSvelte, color: '#FF3E00' },
+  Fastify: { icon: SiFastify, color: '#1A1A1A' },
+  Swift: { icon: SiSwift, color: '#F05138' },
+  Kotlin: { icon: SiKotlin, color: '#0095D5' },
+  Vite: { icon: SiVite, color: '#646CFF' },
 };
 
 export function getCurrentYear() {

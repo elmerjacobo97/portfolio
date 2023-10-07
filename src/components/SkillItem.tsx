@@ -5,8 +5,8 @@ import { IconType } from 'react-icons';
 interface Skill {
   name: string;
   value: number;
+  description: string; // Agrega esta línea
 }
-
 interface SkillItemProps {
   skills: Skill[];
 }
@@ -59,6 +59,9 @@ export const SkillItem = ({ skills }: SkillItemProps) => {
                 style={{ width: `${skill.value}%` }}
               ></div>
             </div>
+            <p className="mt-1 text-sm text-gray-600 dark:text-gray-400 ">
+              {skill.description}
+            </p>
           </div>
         </div>
       ))}
