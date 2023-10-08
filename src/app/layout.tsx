@@ -14,6 +14,11 @@ const poppins = Poppins({
 export const metadata = {
   title: 'Portfolio - Elmer Jacobo',
   description: 'Elmer Jacobo Portfolio',
+  openGraph: {
+    title: 'Portfolio - Elmer Jacobo',
+    description: 'Elmer Jacobo Portfolio',
+    images: ['/images/hero.jpg'],
+  },
 };
 
 export default function RootLayout({
