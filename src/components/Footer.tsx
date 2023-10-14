@@ -13,8 +13,7 @@ export const Footer = () => {
     const timer = setInterval(() => {
       setQuoteIndex((prevIndex) => (prevIndex + 1) % quotes.length);
       setAnimationIndex((prevIndex) => (prevIndex + 1) % animations.length);
-    }, 60000);
-
+    }, 5000);
     return () => clearInterval(timer);
   }, []);
 
