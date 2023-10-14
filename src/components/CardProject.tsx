@@ -1,7 +1,6 @@
 import { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 import { HiCode, HiExternalLink } from 'react-icons/hi';
-import ScrollReveal from 'scrollreveal';
 
 interface CardProps {
   imageSrc: string;
@@ -23,7 +22,6 @@ export const CardProject = ({
   visiteSite,
 }: CardProps) => {
   const cardRef = useRef<HTMLDivElement>(null);
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -52,22 +50,12 @@ export const CardProject = ({
       ref={cardRef}
     >
       <figure className="relative overflow-hidden rounded-t-lg">
-        <div
-          className={`w-full  bg-gray-300 dark:bg-gray-700  animate-pulse absolute inset-0 z-10 ${
-            !isLoading && 'hidden'
-          }`}
-        ></div>
         <Image
           src={imageSrc}
           width={500}
           height={550}
           alt={imageAlt}
           className="relative z-0"
-          onLoad={() => {
-            setTimeout(() => {
-              setIsLoading(false);
-            }, 3000);
-          }}
         />
       </figure>
       <div className="flex flex-col justify-between p-4 card-body">
