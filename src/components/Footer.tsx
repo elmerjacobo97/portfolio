@@ -28,8 +28,16 @@ export const Footer = () => {
             <FaMapMarkerAlt className="mr-2" />
             <strong>Ubicación</strong>
           </div>
-          Trujillo, Perú
+          <a
+            href="https://www.google.com/maps?q=Trujillo,Perú"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 dark:text-blue-400 link-hover"
+          >
+            Trujillo, Perú
+          </a>
         </div>
+
         <div
           className={`hidden mb-4 italic text-center md:block animate__animated ${currentAnimation}`}
           key={quoteIndex}
