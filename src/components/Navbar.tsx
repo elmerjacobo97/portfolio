@@ -36,7 +36,7 @@ export const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className={`mt-3 w-52 p-2 shadow menu dropdown-content rounded-box h-60 max-h-64 bg-slate-200 dark:bg-red-700 ${
+            className={`mt-3 w-52 p-2 shadow menu dropdown-content rounded-box h-60 max-h-64 bg-slate-200 dark:bg-gray-900 ${
               isDropdownOpen ? 'block' : 'hidden'
             }`}
           >
