@@ -14,8 +14,7 @@ export default function Home() {
             Elmer Jacobo
           </h1>
           <p className="text-base sm:text-lg">
-            Desarrollador de software apasionado por la tecnología y la
-            innovación.
+            Desarrollador de software apasionado por la tecnología y la innovación.
           </p>
           <h2 className="mt-5 text-xl font-black text-blue-300 dark:text-blue-400 sm:text-4xl">
             <span className="block">¿Qué hago?</span>
@@ -60,10 +59,10 @@ export default function Home() {
             </a>
           </div>
 
-          <button className="gap-1 mt-10 btn btn-primary ">
+          <a download className="gap-1 mt-10 btn btn-primary" href="/cv/Elmer_Jacobo_Otiniano_CV.pdf">
             <HiOutlineDownload size={20} />
             Descargar CV
-          </button>
+          </a>
         </div>
       </div>
       <Footer />

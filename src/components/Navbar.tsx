@@ -14,11 +14,7 @@ export const Navbar = () => {
     <nav className="fixed inset-x-0 top-0 z-50 h-16 text-gray-500 shadow md:px-10 bg-slate-200 navbar dark:text-gray-300 dark:bg-gray-900">
       <div className="navbar-start">
         <div className="dropdown">
-          <label
-            tabIndex={0}
-            className="btn btn-ghost md:hidden"
-            onClick={() => setDropdownOpen(!isDropdownOpen)}
-          >
+          <label tabIndex={0} className="btn btn-ghost md:hidden" onClick={() => setDropdownOpen(!isDropdownOpen)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-5 h-5"
@@ -26,12 +22,7 @@ export const Navbar = () => {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
           </label>
           <ul
@@ -57,7 +48,7 @@ export const Navbar = () => {
         <div className="avatar">
           <div className="w-12 rounded-full">
             <Image
-              src="/images/profile.jpg"
+              src="/images/profile-v2.jpeg"
               width={100}
               height={100}
               className="rounded-full"
